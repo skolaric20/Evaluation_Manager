@@ -1,6 +1,6 @@
 ﻿namespace Evaluation_Manager
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             this.Login.TabIndex = 1;
             this.Login.Text = "Login";
             this.Login.UseVisualStyleBackColor = true;
-            this.Login.Click += new System.EventHandler(this.button1_Click);
+//            this.Login.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -53,7 +53,7 @@
             this.label1.Size = new System.Drawing.Size(97, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Korisničko ime:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+//            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

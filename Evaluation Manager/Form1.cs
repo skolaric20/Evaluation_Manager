@@ -10,16 +10,29 @@ using System.Windows.Forms;
 
 namespace Evaluation_Manager
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            public static Teacher LoggedTeacher { get; set; }
 
+        LoggedTeacher = TeacherRepository.GetTeacher(txtUsername.Text); 
+            if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text)) 
+            {
+                FrmStudents frmStudents = new FrmStudents();
+        Hide();
+        frmStudents.ShowDialog();
+                Close();
+    }
+            else
+            {
+                MessageBox.Show("Neispravni podaci");
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
